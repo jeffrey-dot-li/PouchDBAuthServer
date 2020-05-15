@@ -1,0 +1,27 @@
+
+    TypeError [ERR_INVALID_ARG_TYPE]: The "digest" argument must be of type string. Received undefined
+        at check (internal/crypto/pbkdf2.js:56:11)
+        at Object.pbkdf2 (internal/crypto/pbkdf2.js:25:5)
+        at AsyncWrap.<anonymous> (C:\Data\Pouch_DB_Server\node_modules\couch-pwd\index.js:56:14)
+        at AsyncWrap.wrap.ondone (internal/crypto/random.js:63:8)
+    [nodemon] app crashed - waiting for file changes before starting...
+-After Discord OAuth goes through
+Issue : 
+https://github.com/nodejs/help/issues/1006
+node_modules\couch-pwd\index.js
+-> add digest = "sha512"
+
+
+TypeError: superlogin.onLink is not a function
+    at Object.<anonymous> (C:\Data\Pouch_DB_Server\lib\index.ts:62:12)
+Go to 
+    node_modules\superlogin\lib\index.js,
+     add ```onLink : user.onLink``` to line 72
+
+
+(node:7420) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch 
+block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 3)
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:7420) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+
+--> database login credentials are incorrect

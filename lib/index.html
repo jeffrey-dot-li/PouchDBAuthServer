@@ -1,0 +1,15 @@
+<html>
+    <button id="hi" onclick="openDiscordPopup()">Hi</button>
+    <h1>Token: </h1>
+    <h3 id="token_field"></h3>
+    <h1>Password: </h1>
+    <h3 id="password_field"></h3>
+<script>
+    const openDiscordPopup = () => {
+        const result = window.open('./auth/discord');
+        console.log(result);
+        document.getElementById("token_field").innerHTML = result.session.token;
+        document.getElementById("password_field").innerHTML = result.session.password;
+    }
+</script>
+</html>
