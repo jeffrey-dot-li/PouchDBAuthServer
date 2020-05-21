@@ -26,7 +26,10 @@
     export interface DiscordUser extends BaseUser<"discord"> {
 
         discord : {
-            profile : {},
+            profile : {
+                id : string,
+                username : string,
+            },
             auth : {
                 accessToken : string;
                 refreshToken : string;

@@ -19,7 +19,8 @@ const config = {
             },
             options: {
                 scope : ['email', 'identify', 'guilds'],
-            }
+            },
+            stateRequired : true,
         }
     },
     userDBs: {
